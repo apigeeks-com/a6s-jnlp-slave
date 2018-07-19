@@ -1,0 +1,4 @@
+#!/bin/bash
+
+DOCKER_DAEMON_ARGS=-D wrapdocker
+jenkins-slave $@

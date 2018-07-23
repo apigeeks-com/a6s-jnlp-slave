@@ -10,3 +10,13 @@ Additional tools that are installed:
 - docker-compose@1.21.1
 - node@8.11.3
 - yarn@1.7.0
+- a6s-railway@0.1.5
+
+# How to publish docker image?
+
+```bash
+docker login
+
+docker build -t apigeeks/a6s-jnlp-slave:1.0.2 .
+docker push apigeeks/a6s-jnlp-slave:1.0.2
+```

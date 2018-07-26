@@ -49,7 +49,7 @@ RUN tar -xJvf "node-v${NODEJS_VERSION}-linux-x64.tar.xz" -C /tmp \
 ENV YARN_VERSION="1.7.0"
 RUN npm install --global yarn@${YARN_VERSION}
 
-ENV A6S_RAILWAY="0.1.5"
+ENV A6S_RAILWAY="0.1.10"
 RUN npm install --global a6s-railway@${A6S_RAILWAY}
 
 # Cleanup

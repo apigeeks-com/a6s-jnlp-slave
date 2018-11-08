@@ -36,8 +36,8 @@ RUN curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - && \
     apt-get install -qq -y --no-install-recommends docker-ce=${DOCKER_VERSION}~ce~3-0~debian
 
 # Install the magic wrapper.
-ADD ./wrapdocker /usr/local/bin/wrapdocker
-RUN chmod +x /usr/local/bin/wrapdocker
+#RUN curl https://raw.githubusercontent.com/jpetazzo/dind/master/wrapdocker > /usr/local/bin/wrapdocker
+#RUN chmod +x /usr/local/bin/wrapdocker
 
 ARG DOCKER_COMPOSE_VERSION="1.21.1"
 RUN curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose && \

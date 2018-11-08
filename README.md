@@ -13,11 +13,20 @@ Additional tools that are installed:
 - yarn@1.10.1
 - a6s-railway@0.1.15
 
+# Volumes:
+
+To make docker use host docker daemon:
+- /var/run/docker.sock:/var/run/docker.sock
+- /usr/bin/docker:/usr/bin/docker
+
+To increase docker storage:
+- /var/lib/docker
+
 # How to publish docker image?
 
 ```bash
 docker login
 
-docker build -t apigeeks/a6s-jnlp-slave:1.0.8 .
-docker push apigeeks/a6s-jnlp-slave:1.0.8
+docker build -t apigeeks/a6s-jnlp-slave:1.0.11 .
+docker push apigeeks/a6s-jnlp-slave:1.0.11
 ```

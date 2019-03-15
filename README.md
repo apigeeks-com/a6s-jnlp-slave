@@ -11,7 +11,6 @@ Additional tools that are installed:
 - docker-compose@1.21.1
 - node@10.13.0
 - yarn@1.10.1
-- a6s-railway@0.1.15
 
 # Volumes:
 
@@ -24,9 +23,4 @@ To increase docker storage:
 
 # How to publish docker image?
 
-```bash
-docker login
-
-docker build -t apigeeks/a6s-jnlp-slave:1.0.11 .
-docker push apigeeks/a6s-jnlp-slave:1.0.11
-```
+Git tag and everything else CircleCI will do for you.

@@ -53,9 +53,6 @@ RUN cp -R /tmp/node-v${NODEJS_VERSION}-linux-x64/* /usr/local
 ENV YARN_VERSION="1.10.1"
 RUN npm install --global yarn@${YARN_VERSION}
 
-ENV A6S_RAILWAY="0.1.15"
-RUN npm install --global a6s-railway@${A6S_RAILWAY}
-
 # Cleanup
 RUN apt-get clean \
     && rm -rf /tmp/* ~/*.tgz \

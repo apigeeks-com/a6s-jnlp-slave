@@ -18,10 +18,11 @@ jobs:
     <<: *defaults
     steps:    
       - checkout        
-      
+
       - setup_remote_docker
 
       - run: 
+          name: build and push docker image
           command: |
             if [[ -z "$CIRCLE_BUILD_NUM" ]]; then                            
               sudo docker build -t $DOCKER_IMAGE_NAME:latest .

@@ -16,7 +16,9 @@ defaults: &defaults
 jobs:
   deploy:
     <<: *defaults
-    steps:            
+    steps:    
+      - checkout        
+      
       - setup_remote_docker
 
       - run: 
